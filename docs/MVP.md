@@ -52,12 +52,12 @@ The iOS app can successfully call the FastAPI backend.
 
 # Phase 2 — Screenshot Import
 
-- [ ] Add `PhotosPicker`
-- [ ] Allow user to select one image
-- [ ] Display selected image in the app
-- [ ] Show loading state while image loads
-- [ ] Handle image selection failure
-- [ ] Convert selected image into uploadable data
+- [x] Add `PhotosPicker`
+- [x] Allow user to select one image
+- [x] Display selected image in the app
+- [x] Show loading state while image loads
+- [x] Handle image selection failure
+- [x] Convert selected image into uploadable data
 
 ### Phase 2 Done When
 
