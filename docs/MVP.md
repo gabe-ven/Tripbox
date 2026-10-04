@@ -69,11 +69,11 @@ A user can select a screenshot from Photos and preview it inside Tripbox.
 
 ## Backend
 
-- [ ] Add `POST /analyze-screenshot`
-- [ ] Accept multipart image upload
-- [ ] Validate file type
-- [ ] Validate file size
-- [ ] Return temporary mock response
+- [x] Add `POST /analyze-screenshot`
+- [x] Accept multipart image upload
+- [x] Validate file type
+- [x] Validate file size
+- [x] Return temporary mock response
 
 Example:
 
@@ -90,11 +90,11 @@ Example:
 
 ## iOS
 
-- [ ] Upload selected image to backend
-- [ ] Decode response
-- [ ] Display detected place
-- [ ] Show loading state
-- [ ] Show upload error state
+- [x] Upload selected image to backend
+- [x] Decode response
+- [x] Display detected place
+- [x] Show loading state
+- [x] Show upload error state
 
 ### Phase 3 Done When
 

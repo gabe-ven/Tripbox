@@ -2,7 +2,8 @@ import PhotosUI
 import SwiftUI
 import UIKit
 
-struct SelectedScreenshot {
+struct SelectedScreenshot: Identifiable {
+    let id = UUID()
     let image: UIImage
     /// JPEG data ready to upload. Re-encoding also drops photo metadata such as location.
     let uploadData: Data
