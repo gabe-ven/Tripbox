@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     app_name: str = "Tripbox API"
     environment: str = "development"
     log_level: str = "INFO"
+    max_upload_bytes: int = 10 * 1024 * 1024
 
 
 settings = Settings()
