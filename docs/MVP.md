@@ -106,25 +106,25 @@ A screenshot can travel from iPhone → FastAPI → iPhone and return structured
 
 ## AI Service
 
-- [ ] Add multimodal model integration
-- [ ] Send screenshot to vision model
-- [ ] Request structured output
-- [ ] Detect whether screenshot is travel-related
-- [ ] Extract place name
-- [ ] Extract city
-- [ ] Extract country
-- [ ] Extract category
-- [ ] Return confidence score if supported
-- [ ] Validate AI response before returning it
+- [x] Add multimodal model integration
+- [x] Send screenshot to vision model
+- [x] Request structured output
+- [x] Detect whether screenshot is travel-related
+- [x] Extract place name
+- [x] Extract city
+- [x] Extract country
+- [x] Extract category
+- [x] Return confidence score if supported
+- [x] Validate AI response before returning it
 
 ## Handle Edge Cases
 
-- [ ] Screenshot contains no travel place
-- [ ] Screenshot contains multiple places
-- [ ] Place name is incomplete
-- [ ] City is missing
-- [ ] AI returns malformed output
-- [ ] AI request fails
+- [x] Screenshot contains no travel place
+- [x] Screenshot contains multiple places
+- [x] Place name is incomplete
+- [x] City is missing
+- [x] AI returns malformed output
+- [x] AI request fails
 
 ### Phase 4 Done When
 

@@ -21,6 +21,9 @@ struct AnalysisResultView: View {
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+        } else if analysis.travelRelated {
+            Label("This looks travel-related, but the place couldn't be identified.", systemImage: "questionmark.circle")
+                .foregroundStyle(.secondary)
         } else {
             Label("No travel place found in this screenshot.", systemImage: "questionmark.circle")
                 .foregroundStyle(.secondary)
