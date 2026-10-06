@@ -4,7 +4,11 @@ from fastapi import APIRouter, HTTPException, UploadFile, status
 
 from app.core.config import settings
 from app.models.screenshot import ScreenshotAnalysis
-from app.services.screenshot_analysis import analyze_screenshot, detect_image_format
+from app.services.screenshot_analysis import (
+    ScreenshotAnalysisError,
+    analyze_screenshot,
+    detect_image_format,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -28,8 +32,11 @@ async def analyze_screenshot_route(file: UploadFile) -> ScreenshotAnalysis:
     if image_format is None:
         raise HTTPException(
             status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            "Unsupported file type. Upload a JPEG, PNG, HEIC, or WebP image.",
+            "Unsupported file type. Upload a JPEG, PNG, or WebP image.",
         )
 
     logger.info("Analyzing screenshot: format=%s size=%d bytes", image_format, len(data))
-    return analyze_screenshot(data)
+    try:
+        return await analyze_screenshot(data, image_format)
+    except ScreenshotAnalysisError as e:
+        raise HTTPException(status.HTTP_502_BAD_GATEWAY, str(e))
